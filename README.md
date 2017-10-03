@@ -1,11 +1,8 @@
-## dockselpy
+## dockselfirchropy haha
 
-Dockerfile example on how to *"assemble"* together Selenium (with support for both Chrome and Firefox), Python and Xfvb.
+Dockerfile example on how to *"assemble"* together Selenium (with support for both Chrome and Firefox), Python and Xfvb. For a similar setup, look for InstaPy on Github.
 
 ### Information
-
-Recent struggle with finding a docker image for Selenium that supports headless versions for both Firefox and Chrome, 
-led to the process of building my own version.
 
 The image is build with the following dependencies:
 - latest Chrome and chromedriver
@@ -22,13 +19,6 @@ The image is build with the following dependencies:
     docker build -t selenium_docker .
     docker run --privileged -p 4000:4000 -d -it selenium_docker 
     ```
-
-- docker-compose
-
-    ```
-    docker-compose stop && docker-compose build && docker-compose up -d
-    ```
-    
     
 ### Example
 
@@ -48,5 +38,4 @@ display.stop()
 
 ```
 
-Detailed examples on how to use Firefox with custom profile and Google Chrome with desired options can be found in the 
-source.
+Detailed examples on how to use Firefox with custom profile and Google Chrome with desired options can be found in example.py.
