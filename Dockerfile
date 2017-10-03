@@ -15,7 +15,8 @@ RUN apt-get update \
                curl \
                unzip \
                wget \
-               xvfb 
+               xvfb \
+    && apt-get clean
 
 
 # install geckodriver and firefox
@@ -41,11 +42,11 @@ RUN unzip chromedriver_linux64.zip -d /usr/bin \
 
 # Copy requirements
 COPY requirements.txt /code/
+WORKDIR /code
 
 # Install necessary libraries
 RUN pip3 install -r requirements.txt
-                 
-WORKDIR /code
+
 
 ENV APP_HOME /code
 ADD . /code
